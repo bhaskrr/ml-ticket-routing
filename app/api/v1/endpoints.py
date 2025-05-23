@@ -6,10 +6,14 @@ from ml.models_classes import CategoryClassifier, PriorityClassifier
 from ml.category_encoder import CategoryEncoder
 # import cleaning function to clean the raw text
 from utils.data_cleaning import clean_text
+# import logger to log the predictions
+from utils.logger import get_logger
 # import global settings class
 from config import Settings
 # import hstack from scipy.sparse to combine sparse matrices
 from scipy.sparse import hstack
+
+logger = get_logger(__name__)
 
 config = Settings()
 
@@ -63,10 +67,8 @@ def get_predictions(text: str):
     
     # Predict the priority
     priority = priority_classifier.predict(combined_feature)
-    
-    # Print the predictions for debugging purposes
-    print(f"Predicted category: {category}")
-    print(f"Predicted priority: {priority}")
+    # Log the predictions
+    logger.info(f"Text: {text}, Category: {category}, Priority: {priority}")
     
     # Return the results
     result = {
