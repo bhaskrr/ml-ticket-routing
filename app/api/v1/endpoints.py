@@ -12,6 +12,10 @@ from utils.logger import get_logger
 from config import Settings
 # import hstack from scipy.sparse to combine sparse matrices
 from scipy.sparse import hstack
+# import input and prediction output schemas
+from schemas import PredictionInputSchema, PredictionOutputSchema
+# import time for calculating the prediction time
+import time
 
 logger = get_logger(__name__)
 
@@ -44,7 +48,7 @@ router = APIRouter()
 
 # Prediction endpoint
 @router.post("/predict")
-def get_predictions(text: str):
+def get_predictions(payload: PredictionInputSchema):
     """
     Predict the category and priority of the given text.
     Args:
@@ -52,8 +56,13 @@ def get_predictions(text: str):
     Returns:
         dict: A dictionary containing the predicted category and priority.
     """
+    # start the timer to measure the time taken for prediction
+    start_time = time.time()
+    # Extract the text from the payload
+    raw_text = payload.text
+    
     # Clean the text
-    preprocessed_text = clean_text(text)
+    preprocessed_text = clean_text(raw_text)
     
     # Predict the category
     category = category_classifier.predict(preprocessed_text)
@@ -67,12 +76,15 @@ def get_predictions(text: str):
     
     # Predict the priority
     priority = priority_classifier.predict(combined_feature)
-    # Log the predictions
-    logger.info(f"Text: {text}, Category: {category}, Priority: {priority}")
     
+    time_taken_before_logging = time.time() - start_time
+    # Log
+    logger.info(f"Text: {raw_text}, Category: {category}, Priority: {priority}, Time taken: {time_taken_before_logging:.2f} seconds")
+    
+    total_time = time.time() - start_time
     # Return the results
-    result = {
-        "category": category,
-        "priority": priority,
-    }
-    return result
+    return PredictionOutputSchema(
+        category=category,
+        priority=priority,
+        response_time=total_time,
+    )
