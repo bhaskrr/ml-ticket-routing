@@ -13,7 +13,7 @@ from config import Settings
 # import hstack from scipy.sparse to combine sparse matrices
 from scipy.sparse import hstack
 # import input and prediction output schemas
-from schemas import PredictionInputSchema, PredictionOutputSchema
+from app.utils.schemas import PredictionInputSchema, PredictionOutputSchema
 # import time for calculating the prediction time
 import time
 
