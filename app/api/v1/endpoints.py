@@ -1,15 +1,15 @@
 # import fastapi router
 from fastapi import APIRouter
 # import model classes
-from ml.models_classes import CategoryClassifier, PriorityClassifier
+from app.ml.models_classes import CategoryClassifier, PriorityClassifier
 # import category encoder to encode the category string
-from ml.category_encoder import CategoryEncoder
+from app.ml.category_encoder import CategoryEncoder
 # import cleaning function to clean the raw text
-from utils.data_cleaning import clean_text
+from app.utils.data_cleaning import clean_text
 # import logger to log the predictions
-from utils.logger import get_logger
+from app.utils.logger import get_logger
 # import global settings class
-from config import Settings
+from app.config import Settings
 # import hstack from scipy.sparse to combine sparse matrices
 from scipy.sparse import hstack
 # import input and prediction output schemas

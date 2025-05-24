@@ -1,8 +1,8 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from api.v1.endpoints import router
+from app.api.v1.endpoints import router
 from fastapi.exceptions import HTTPException, RequestValidationError
-from utils.error_handlers import (
+from app.utils.error_handlers import (
     validation_exception_handler,
     http_exception_handler,
     unhandled_exception_handler,
