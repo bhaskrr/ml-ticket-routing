@@ -22,3 +22,8 @@ app.include_router(router, prefix="/api/v1", tags=["v1"])
 def index():
     return {"message": "Hello, World!"}
 
+
+@app.get("/health")
+def health_check():
+    """Helath check endpoint to verify if the API is running"""
+    return {"status": "ok", "message": "API is running"}
