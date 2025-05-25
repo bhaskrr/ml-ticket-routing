@@ -19,14 +19,12 @@ import time
 
 logger = get_logger(__name__)
 
-config = Settings()
-
 # Load the model paths from the config
-category_classifier_model_path = config.category_classifier_model_path
-category_classifier_vectorizer_path = config.category_classifier_vectorizer_path
+category_classifier_model_path = Settings.CATEGORY_CLASSIFIER_MODEL_PATH
+category_classifier_vectorizer_path = Settings.CATEGORY_CLASSIFIER_VECTORIZER_PATH
 
-priority_classifier_model_path = config.priority_classifier_model_path
-priority_classifier_vectorizer_path = config.priority_classifier_vectorizer_path
+priority_classifier_model_path = Settings.PRIORITY_CLASSIFIER_MODEL_PATH
+priority_classifier_vectorizer_path = Settings.PRIORITY_CLASSIFIER_VECTORIZER_PATH
 
 # Initialize the classifiers and encoder
 category_classifier = CategoryClassifier(
@@ -40,7 +38,7 @@ priority_classifier = PriorityClassifier(
 )
 
 category_encoder = CategoryEncoder(
-    path_to_encoder=config.category_encoder_path,
+    path_to_encoder=Settings.CATEGORY_ENCODER_PATH,
 )
 
 # Create a FastAPI router
