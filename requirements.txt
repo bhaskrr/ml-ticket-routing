@@ -8,3 +8,5 @@ uvicorn
 pytest
 pydantic
 python-dotenv
+httpx
+huggingface_hub
