@@ -1,8 +1,12 @@
 import joblib
 import os
+from app.utils.load_models import load_model
 
 class CategoryClassifier:
     def __init__(self, path_to_model: str, path_to_vectorizer: str):
+        # Load model
+        load_model(path_to_model.split("/")[-1], save_to=path_to_model)
+        
         if not os.path.exists(path_to_model):
             raise FileNotFoundError(f"Model file not found: {path_to_model}")
         if not os.path.exists(path_to_vectorizer):
@@ -25,6 +29,9 @@ class CategoryClassifier:
 
 class PriorityClassifier:
     def __init__(self, path_to_model: str, path_to_vectorizer: str):
+        # Load model
+        load_model(model_name= path_to_model.split("/")[-1], save_to= path_to_model)
+        
         if not os.path.exists(path_to_model):
             raise FileNotFoundError(f"Model file not found: {path_to_model}")
         if not os.path.exists(path_to_vectorizer):
