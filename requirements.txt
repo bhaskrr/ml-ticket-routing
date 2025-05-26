@@ -6,7 +6,6 @@ joblib
 fastapi
 uvicorn
 pytest
-time
 random
 logging
 pydantic
