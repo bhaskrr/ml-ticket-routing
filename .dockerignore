@@ -1,0 +1,12 @@
+__pycache__
+tests/
+/app/ml/models/*
+!/app/ml/models/.gitkeep
+.pytest_cache
+.env
+.github
+.gitignore
+.vscode
+zip_models.py
+machine_learning
+README.md
