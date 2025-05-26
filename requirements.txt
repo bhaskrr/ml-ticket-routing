@@ -6,7 +6,5 @@ joblib
 fastapi
 uvicorn
 pytest
-random
-logging
 pydantic
 python-dotenv
