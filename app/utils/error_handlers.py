@@ -10,11 +10,18 @@ async def validation_exception_handler(request: Request, exc: RequestValidationE
     Cusatom handler for validation errors.
     """
     logger.error(f"Validation error: {exc.errors()}")
+    body = exc.body
+    if isinstance(body, bytes):
+        try:
+            body = body.decode("utf-8")
+        except Exception:
+            body = str(body)
+
     return JSONResponse(
         status_code=422,
         content={
             "detail": exc.errors(),
-            "body": exc.body,
+            "body": body,
         }
     )
 
