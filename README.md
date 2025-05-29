@@ -461,7 +461,9 @@ You can interact with the deployed app here:
 
 ## 🧪 How to Use
 
-<iframe width="560" height="315" src="https://drive.google.com/file/d/1jWM0TTLC2fNC1-UeK2aEntRDP-nMGY7j/preview?embedded=true" frameborder="0" allowfullscreen></iframe>
+Click the following image for a video demonstration:
+
+[![ui-demo-screenshot](/media/ui-demo.png)](/media/ticket-classifier-demo.gif)
 
 1. Go to the live frontend
 
