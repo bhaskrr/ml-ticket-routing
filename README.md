@@ -217,7 +217,7 @@ This is a multi-class classification problem for both labels.
 
 ### 🧪 Data Split
 
-    Split the dataset for reliable training and evaluation. 80% of the dataset is used for training and 20% is used for evaluation.
+Split the dataset for reliable training and evaluation. 80% of the dataset is used for training and 20% is used for evaluation.
 
 ---
 
@@ -440,11 +440,11 @@ In this phase, a user-friendly frontend was developed to interact with the ML ti
 
 ### 🎨 Design Highlights
 
-    - Mobile-responsive layout using Tailwind's utility classes
+- Mobile-responsive layout using Tailwind's utility classes
 
-    - Clean, modern typography
+- Clean, modern typography
 
-    - Form-centric UI focused on clarity
+- Form-centric UI focused on clarity
 
 ## Documentation & Reporting
 
@@ -478,37 +478,37 @@ The app will display the predicted department and priority level based on your i
 
 ### ⚠️ Limitations
 
-    The model is trained on a limited dataset and may not generalize well to real-world tickets.
+The model is trained on a limited dataset and may not generalize well to real-world tickets.
 
-    It doesn't handle:
+It doesn't handle:
 
-    - Multi-label classification (only one department predicted).
-    - Complex sentences or industry-specific jargon.
-    - Lacks user authentication and rate limiting.
-    - No spell-check or typo correction in the input.
+- Multi-label classification (only one department predicted).
+- Complex sentences or industry-specific jargon.
+- Lacks user authentication and rate limiting.
+- No spell-check or typo correction in the input.
 
 ### 🚫 Out of Scope
 
-    - Ticket assignment to specific agents or queues.
-    - Multi-language support
-    - Real-time updates or web sockets
-    - A full-fledged ticket management system (CRUD, status tracking, etc.)
+- Ticket assignment to specific agents or queues.
+- Multi-language support
+- Real-time updates or web sockets
+- A full-fledged ticket management system (CRUD, status tracking, etc.)
 
 ### ✅ Possible Future Improvements
 
-    - 🧠 ML/AI Enhancements
+- 🧠 ML/AI Enhancements
 
-        - A better model.
+  - A better model.
 
-        - Support multi-label classification where tickets may belong to multiple departments.
+  - Support multi-label classification where tickets may belong to multiple departments.
 
-        - Integrate confidence scores and show them in the UI.
+  - Integrate confidence scores and show them in the UI.
 
-        - Add explainability features like highlighting important words.
+  - Add explainability features like highlighting important words.
 
-    - 📦 API Enhancements
+- 📦 API Enhancements
 
-      - Add rate limiting and error monitoring.
+  - Add rate limiting and error monitoring.
 
 ---
 
