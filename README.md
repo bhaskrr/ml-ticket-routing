@@ -275,7 +275,7 @@ Logged:
 | Model               | Accuracy | Precision | Recall | F1-score |
 | ------------------- | -------- | --------- | ------ | -------- |
 | Category classifier | 66.86%   | 0.6066    | 0.8214 | 0.6781   |
-| Priority classifier | 70.65%   | 0.6498    | 0.7812 | 0.66733  |
+| Priority classifier | 70.65%   | 0.6498    | 0.7812 | 0.6673  |
 
 ## ✅ API Development & Integration
 
