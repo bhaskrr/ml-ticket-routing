@@ -108,7 +108,7 @@ Start with:
 
 The planned architecture is shown in the diagram below:
 
-![architecture image](/media/architecture.png)
+![architecture image](/media/architecture.svg)
 
 The steps in the planned architecture are:
 
