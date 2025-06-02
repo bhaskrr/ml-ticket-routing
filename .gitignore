@@ -1,0 +1,9 @@
+__pycache__
+/app/ml/models/*
+!/app/ml/models/.gitkeep
+.pytest_cache
+.env
+.vscode
+.coverage
+zip_models.py
+machine_learning
