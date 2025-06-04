@@ -39,5 +39,5 @@ def index():
 
 @app.get("/health")
 def health_check():
-    """Helath check endpoint to verify if the API is running"""
+    """Health check endpoint to verify if the API is running"""
     return {"status": "ok", "message": "API is running"}
